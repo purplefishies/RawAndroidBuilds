@@ -1,16 +1,16 @@
 #!/bin/bash
 
 
-mkdir -p /media/jdamon/Development/Documents/Projects/Android-FTDI/res
-mkdir -p /media/jdamon/Development/Documents/Projects/Android-FTDI/libs
-mkdir -p /media/jdamon/Development/Documents/Projects/Android-FTDI/bin
-mkdir -p /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res
-mkdir -p /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/resObj
-mkdir -p /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/resLibs
-mkdir -p /media/jdamon/Development/Documents/Projects/Android-FTDI/gen
-mkdir -p /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes
-mkdir -p /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/dexedLibs
-mkdir -p /media/jdamon/Development/Documents/Projects/Android-FTDI/gen/com/UARTLoopback
+mkdir -p ${ROOT_DIR}/Android-FTDI/res
+mkdir -p ${ROOT_DIR}/Android-FTDI/libs
+mkdir -p ${ROOT_DIR}/Android-FTDI/bin
+mkdir -p ${ROOT_DIR}/Android-FTDI/bin/res
+mkdir -p ${ROOT_DIR}/Android-FTDI/bin/resObj
+mkdir -p ${ROOT_DIR}/Android-FTDI/bin/resLibs
+mkdir -p ${ROOT_DIR}/Android-FTDI/gen
+mkdir -p ${ROOT_DIR}/Android-FTDI/bin/classes
+mkdir -p ${ROOT_DIR}/Android-FTDI/bin/dexedLibs
+mkdir -p ${ROOT_DIR}/Android-FTDI/gen/com/UARTLoopback
 
 echo "Resolving Dependencies for com.UARTLoopback.UARTLoopbackActivity..."
 
@@ -50,25 +50,25 @@ find . -name "AndroidManifest*" | xargs -I{} cat {} >> bin/AndroidManifest.xml
 # [aapt] '-0'
 # [aapt] 'apk'
 # [aapt] '-M'
-# [aapt] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/AndroidManifest.xml'
+# [aapt] '${ROOT_DIR}/Android-FTDI/bin/AndroidManifest.xml'
 # [aapt] '-S'
-# [aapt] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res'
+# [aapt] '${ROOT_DIR}/Android-FTDI/bin/res'
 # [aapt] '-S'
-# [aapt] '/media/jdamon/Development/Documents/Projects/Android-FTDI/res'
+# [aapt] '${ROOT_DIR}/Android-FTDI/res'
 # [aapt] '-I'
 # [aapt] '/home/jdamon/Tools/android-sdk-linux/platforms/android-12/android.jar'
 # [aapt] '-J'
-# [aapt] '/media/jdamon/Development/Documents/Projects/Android-FTDI/gen'
+# [aapt] '${ROOT_DIR}/Android-FTDI/gen'
 # [aapt] '--generate-dependencies'
 # [aapt] '-G'
-# [aapt] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/proguard.txt'
+# [aapt] '${ROOT_DIR}/Android-FTDI/bin/proguard.txt'
 # [aapt]
 # [aapt] The ' characters around the executable and arguments are
 # [aapt] not part of the command.
 # [echo] Handling BuildConfig class...
 # [buildconfig] Generating BuildConfig class.
 
-/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/aapt package -f -m -0 apk -M /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/AndroidManifest.xml -S /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res -S /media/jdamon/Development/Documents/Projects/Android-FTDI/res -I /home/jdamon/Tools/android-sdk-linux/platforms/android-12/android.jar -J /media/jdamon/Development/Documents/Projects/Android-FTDI/gen --generate-dependencies -G /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/proguard.txt
+/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/aapt package -f -m -0 apk -M ${ROOT_DIR}/Android-FTDI/bin/AndroidManifest.xml -S ${ROOT_DIR}/Android-FTDI/bin/res -S ${ROOT_DIR}/Android-FTDI/res -I /home/jdamon/Tools/android-sdk-linux/platforms/android-12/android.jar -J ${ROOT_DIR}/Android-FTDI/gen --generate-dependencies -G ${ROOT_DIR}/Android-FTDI/bin/proguard.txt
 
 
 echo "
@@ -84,18 +84,18 @@ public final class BuildConfig {
 # [javac] com/UARTLoopback/FT311UARTInterface.java added as com/UARTLoopback/FT311UARTInterface.class doesn't exist.
 # [javac] com/UARTLoopback/Globals.java added as com/UARTLoopback/Globals.class doesn't exist.
 # [javac] com/UARTLoopback/UARTLoopbackActivity.java added as com/UARTLoopback/UARTLoopbackActivity.class doesn't exist.
-# [javac] /media/jdamon/Development/Documents/Projects/Android-FTDI/gen/R.java.d skipped - don't know how to handle it
+# [javac] ${ROOT_DIR}/Android-FTDI/gen/R.java.d skipped - don't know how to handle it
 # [javac] com/UARTLoopback/BuildConfig.java added as com/UARTLoopback/BuildConfig.class doesn't exist.
 # [javac] com/UARTLoopback/R.java added as com/UARTLoopback/R.class doesn't exist.
-# [javac] Compiling 5 source files to /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes
+# [javac] Compiling 5 source files to ${ROOT_DIR}/Android-FTDI/bin/classes
 # [javac] Using modern compiler
 # [javac] Compilation arguments:
 # [javac] '-d'
-# [javac] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes'
+# [javac] '${ROOT_DIR}/Android-FTDI/bin/classes'
 # [javac] '-classpath'
-# [javac] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes:/home/jdamon/Tools/android-sdk-linux/tools/support/annotations.jar'
+# [javac] '${ROOT_DIR}/Android-FTDI/bin/classes:/home/jdamon/Tools/android-sdk-linux/tools/support/annotations.jar'
 # [javac] '-sourcepath'
-# [javac] '/media/jdamon/Development/Documents/Projects/Android-FTDI/src:/media/jdamon/Development/Documents/Projects/Android-FTDI/gen'
+# [javac] '${ROOT_DIR}/Android-FTDI/src:${ROOT_DIR}/Android-FTDI/gen'
 # [javac] '-target'
 # [javac] '1.5'
 # [javac] '-bootclasspath'
@@ -109,50 +109,50 @@ public final class BuildConfig {
 # [javac] The ' characters around the executable and arguments are
 # [javac] not part of the command.
 # [javac] Files to be compiled:
-# [javac]     /media/jdamon/Development/Documents/Projects/Android-FTDI/src/com/UARTLoopback/FT311UARTInterface.java
-# [javac]     /media/jdamon/Development/Documents/Projects/Android-FTDI/src/com/UARTLoopback/Globals.java
-# [javac]     /media/jdamon/Development/Documents/Projects/Android-FTDI/src/com/UARTLoopback/UARTLoopbackActivity.java
-# [javac]     /media/jdamon/Development/Documents/Projects/Android-FTDI/gen/com/UARTLoopback/BuildConfig.java
-# [javac]     /media/jdamon/Development/Documents/Projects/Android-FTDI/gen/com/UARTLoopback/R.java
+# [javac]     ${ROOT_DIR}/Android-FTDI/src/com/UARTLoopback/FT311UARTInterface.java
+# [javac]     ${ROOT_DIR}/Android-FTDI/src/com/UARTLoopback/Globals.java
+# [javac]     ${ROOT_DIR}/Android-FTDI/src/com/UARTLoopback/UARTLoopbackActivity.java
+# [javac]     ${ROOT_DIR}/Android-FTDI/gen/com/UARTLoopback/BuildConfig.java
+# [javac]     ${ROOT_DIR}/Android-FTDI/gen/com/UARTLoopback/R.java
 
-javac -d /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes -classpath /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes:/home/jdamon/Tools/android-sdk-linux/tools/support/annotations.jar -sourcepath /media/jdamon/Development/Documents/Projects/Android-FTDI/src:/media/jdamon/Development/Documents/Projects/Android-FTDI/gen -target 1.5 -bootclasspath /home/jdamon/Tools/android-sdk-linux/platforms/android-12/android.jar -encoding UTF-8 -g -source 1.5     /media/jdamon/Development/Documents/Projects/Android-FTDI/src/com/UARTLoopback/FT311UARTInterface.java     /media/jdamon/Development/Documents/Projects/Android-FTDI/src/com/UARTLoopback/Globals.java     /media/jdamon/Development/Documents/Projects/Android-FTDI/src/com/UARTLoopback/UARTLoopbackActivity.java     /media/jdamon/Development/Documents/Projects/Android-FTDI/gen/com/UARTLoopback/BuildConfig.java     /media/jdamon/Development/Documents/Projects/Android-FTDI/gen/com/UARTLoopback/R.java 
+javac -d ${ROOT_DIR}/Android-FTDI/bin/classes -classpath ${ROOT_DIR}/Android-FTDI/bin/classes:/home/jdamon/Tools/android-sdk-linux/tools/support/annotations.jar -sourcepath ${ROOT_DIR}/Android-FTDI/src:${ROOT_DIR}/Android-FTDI/gen -target 1.5 -bootclasspath /home/jdamon/Tools/android-sdk-linux/platforms/android-12/android.jar -encoding UTF-8 -g -source 1.5     ${ROOT_DIR}/Android-FTDI/src/com/UARTLoopback/FT311UARTInterface.java     ${ROOT_DIR}/Android-FTDI/src/com/UARTLoopback/Globals.java     ${ROOT_DIR}/Android-FTDI/src/com/UARTLoopback/UARTLoopbackActivity.java     ${ROOT_DIR}/Android-FTDI/gen/com/UARTLoopback/BuildConfig.java     ${ROOT_DIR}/Android-FTDI/gen/com/UARTLoopback/R.java 
 
 
 
 # -dex:
-#       [dex] input: /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes
+#       [dex] input: ${ROOT_DIR}/Android-FTDI/bin/classes
 #       [dex] input: /home/jdamon/Tools/android-sdk-linux/tools/support/annotations.jar
 #       [dex] Pre-Dexing /home/jdamon/Tools/android-sdk-linux/tools/support/annotations.jar -> annotations-d4548245874597f462feb72e9304e74c.jar
 #        [dx] Current OS is Linux
 #        [dx] Executing '/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/dx' with arguments:
 #        [dx] '--dex'
 #        [dx] '--output'
-#        [dx] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/dexedLibs/annotations-d4548245874597f462feb72e9304e74c.jar'
+#        [dx] '${ROOT_DIR}/Android-FTDI/bin/dexedLibs/annotations-d4548245874597f462feb72e9304e74c.jar'
 #        [dx] '/home/jdamon/Tools/android-sdk-linux/tools/support/annotations.jar'
 #        [dx]
 #        [dx] The ' characters around the executable and arguments are
 #        [dx] not part of the command.
-#       [dex] Converting compiled files and external libraries into /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes.dex...
+#       [dex] Converting compiled files and external libraries into ${ROOT_DIR}/Android-FTDI/bin/classes.dex...
 #        [dx] Current OS is Linux
 #        [dx] Executing '/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/dx' with arguments:
 #        [dx] '--dex'
 #        [dx] '--output'
-#        [dx] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes.dex'
-#        [dx] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes'
-#        [dx] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/dexedLibs/annotations-d4548245874597f462feb72e9304e74c.jar'
+#        [dx] '${ROOT_DIR}/Android-FTDI/bin/classes.dex'
+#        [dx] '${ROOT_DIR}/Android-FTDI/bin/classes'
+#        [dx] '${ROOT_DIR}/Android-FTDI/bin/dexedLibs/annotations-d4548245874597f462feb72e9304e74c.jar'
 #        [dx]
 #        [dx] The ' characters around the executable and arguments are
 #        [dx] not part of the command.
 #        [dx] Merged dex A (28 defs/30.1KiB) with dex B (2 defs/1.1KiB). Result is 30 defs/36.0KiB. Took 0.1s
 
 
-#input: /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes
+#input: ${ROOT_DIR}/Android-FTDI/bin/classes
 #input: /home/jdamon/Tools/android-sdk-linux/tools/support/annotations.jar
 #Pre-Dexing /home/jdamon/Tools/android-sdk-linux/tools/support/annotations.jar -> annotations-d4548245874597f462feb72e9304e74c.jar
 
-/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/dx --dex --output /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/dexedLibs/annotations-d4548245874597f462feb72e9304e74c.jar /home/jdamon/Tools/android-sdk-linux/tools/support/annotations.jar
+/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/dx --dex --output ${ROOT_DIR}/Android-FTDI/bin/dexedLibs/annotations-d4548245874597f462feb72e9304e74c.jar /home/jdamon/Tools/android-sdk-linux/tools/support/annotations.jar
 
-/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/dx --dex --output /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes.dex /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/dexedLibs/annotations-d4548245874597f462feb72e9304e74c.jar
+/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/dx --dex --output ${ROOT_DIR}/Android-FTDI/bin/classes.dex ${ROOT_DIR}/Android-FTDI/bin/classes ${ROOT_DIR}/Android-FTDI/bin/dexedLibs/annotations-d4548245874597f462feb72e9304e74c.jar
 
 
 
@@ -162,34 +162,34 @@ javac -d /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes -
 #    [crunch] 'crunch'
 #    [crunch] '-v'
 #    [crunch] '-S'
-#    [crunch] '/media/jdamon/Development/Documents/Projects/Android-FTDI/res'
+#    [crunch] '${ROOT_DIR}/Android-FTDI/res'
 #    [crunch] '-C'
-#    [crunch] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res'
+#    [crunch] '${ROOT_DIR}/Android-FTDI/bin/res'
 #    [crunch]
 #    [crunch] The ' characters around the executable and arguments are
 #    [crunch] not part of the command.
-#    [crunch] Crunching PNG Files in source dir: /media/jdamon/Development/Documents/Projects/Android-FTDI/res
-#    [crunch] To destination dir: /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res
-#    [crunch] Processing image to cache: /media/jdamon/Development/Documents/Projects/Android-FTDI/res/drawable-hdpi/icon.png => /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res/drawable-hdpi/icon.png
-#    [crunch]   (processed image to cache entry /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res/drawable-hdpi/icon.png: 94% size of source)
-#    [crunch] Processing image to cache: /media/jdamon/Development/Documents/Projects/Android-FTDI/res/drawable-ldpi/icon.png => /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res/drawable-ldpi/icon.png
-#    [crunch]   (processed image to cache entry /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res/drawable-ldpi/icon.png: 94% size of source)
-#    [crunch] Processing image to cache: /media/jdamon/Development/Documents/Projects/Android-FTDI/res/drawable-mdpi/icon.png => /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res/drawable-mdpi/icon.png
-#    [crunch]   (processed image to cache entry /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res/drawable-mdpi/icon.png: 94% size of source)
+#    [crunch] Crunching PNG Files in source dir: ${ROOT_DIR}/Android-FTDI/res
+#    [crunch] To destination dir: ${ROOT_DIR}/Android-FTDI/bin/res
+#    [crunch] Processing image to cache: ${ROOT_DIR}/Android-FTDI/res/drawable-hdpi/icon.png => ${ROOT_DIR}/Android-FTDI/bin/res/drawable-hdpi/icon.png
+#    [crunch]   (processed image to cache entry ${ROOT_DIR}/Android-FTDI/bin/res/drawable-hdpi/icon.png: 94% size of source)
+#    [crunch] Processing image to cache: ${ROOT_DIR}/Android-FTDI/res/drawable-ldpi/icon.png => ${ROOT_DIR}/Android-FTDI/bin/res/drawable-ldpi/icon.png
+#    [crunch]   (processed image to cache entry ${ROOT_DIR}/Android-FTDI/bin/res/drawable-ldpi/icon.png: 94% size of source)
+#    [crunch] Processing image to cache: ${ROOT_DIR}/Android-FTDI/res/drawable-mdpi/icon.png => ${ROOT_DIR}/Android-FTDI/bin/res/drawable-mdpi/icon.png
+#    [crunch]   (processed image to cache entry ${ROOT_DIR}/Android-FTDI/bin/res/drawable-mdpi/icon.png: 94% size of source)
 #    [crunch] Crunched 3 PNG files to update cache
 
 
 
-/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/aapt crunch -v -S /media/jdamon/Development/Documents/Projects/Android-FTDI/res -C /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res
+/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/aapt crunch -v -S ${ROOT_DIR}/Android-FTDI/res -C ${ROOT_DIR}/Android-FTDI/bin/res
 
-# Crunching PNG Files in source dir: /media/jdamon/Development/Documents/Projects/Android-FTDI/res
-# To destination dir: /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res
-# Processing image to cache: /media/jdamon/Development/Documents/Projects/Android-FTDI/res/drawable-hdpi/icon.png => /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res/drawable-hdpi/icon.png
-#   (processed image to cache entry /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res/drawable-hdpi/icon.png: 94% size of source)
-# Processing image to cache: /media/jdamon/Development/Documents/Projects/Android-FTDI/res/drawable-ldpi/icon.png => /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res/drawable-ldpi/icon.png
-#   (processed image to cache entry /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res/drawable-ldpi/icon.png: 94% size of source)
-# Processing image to cache: /media/jdamon/Development/Documents/Projects/Android-FTDI/res/drawable-mdpi/icon.png => /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res/drawable-mdpi/icon.png
-#   (processed image to cache entry /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res/drawable-mdpi/icon.png: 94% size of source)
+# Crunching PNG Files in source dir: ${ROOT_DIR}/Android-FTDI/res
+# To destination dir: ${ROOT_DIR}/Android-FTDI/bin/res
+# Processing image to cache: ${ROOT_DIR}/Android-FTDI/res/drawable-hdpi/icon.png => ${ROOT_DIR}/Android-FTDI/bin/res/drawable-hdpi/icon.png
+#   (processed image to cache entry ${ROOT_DIR}/Android-FTDI/bin/res/drawable-hdpi/icon.png: 94% size of source)
+# Processing image to cache: ${ROOT_DIR}/Android-FTDI/res/drawable-ldpi/icon.png => ${ROOT_DIR}/Android-FTDI/bin/res/drawable-ldpi/icon.png
+#   (processed image to cache entry ${ROOT_DIR}/Android-FTDI/bin/res/drawable-ldpi/icon.png: 94% size of source)
+# Processing image to cache: ${ROOT_DIR}/Android-FTDI/res/drawable-mdpi/icon.png => ${ROOT_DIR}/Android-FTDI/bin/res/drawable-mdpi/icon.png
+#   (processed image to cache entry ${ROOT_DIR}/Android-FTDI/bin/res/drawable-mdpi/icon.png: 94% size of source)
 # Crunched 3 PNG files to update cache
 
 
@@ -204,22 +204,22 @@ javac -d /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes -
 #      [aapt] '-0'
 #      [aapt] 'apk'
 #      [aapt] '-M'
-#      [aapt] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/AndroidManifest.xml'
+#      [aapt] '${ROOT_DIR}/Android-FTDI/bin/AndroidManifest.xml'
 #      [aapt] '-S'
-#      [aapt] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res'
+#      [aapt] '${ROOT_DIR}/Android-FTDI/bin/res'
 #      [aapt] '-S'
-#      [aapt] '/media/jdamon/Development/Documents/Projects/Android-FTDI/res'
+#      [aapt] '${ROOT_DIR}/Android-FTDI/res'
 #      [aapt] '-I'
 #      [aapt] '/home/jdamon/Tools/android-sdk-linux/platforms/android-12/android.jar'
 #      [aapt] '-F'
-#      [aapt] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity.ap_'
+#      [aapt] '${ROOT_DIR}/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity.ap_'
 #      [aapt] '--generate-dependencies'
 #      [aapt]
 #      [aapt] The ' characters around the executable and arguments are
 #      [aapt] not part of the command.
 
 
-/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/aapt package --no-crunch -f --debug-mode -0 apk -M /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/AndroidManifest.xml -S /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/res -S /media/jdamon/Development/Documents/Projects/Android-FTDI/res -I /home/jdamon/Tools/android-sdk-linux/platforms/android-12/android.jar -F /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity.ap_ --generate-dependencies 
+/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/aapt package --no-crunch -f --debug-mode -0 apk -M ${ROOT_DIR}/Android-FTDI/bin/AndroidManifest.xml -S ${ROOT_DIR}/Android-FTDI/bin/res -S ${ROOT_DIR}/Android-FTDI/res -I /home/jdamon/Tools/android-sdk-linux/platforms/android-12/android.jar -F ${ROOT_DIR}/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity.ap_ --generate-dependencies 
 
 
 # -package:
@@ -243,9 +243,9 @@ javac -d /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes -
 #set PKG_SIGNED_FULL=%PROJ_DIR%\%PKG_SIGNED%
 #set RESOURCE_PACKAGE_FULL=%PROJ_DIR%\%RESOURCE_PACKAGE%
 #set RESOURCE_PACKAGE=%TEMP%\%BUILD%\resources.zip
-RESOURCE_PACKAGE="/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity.ap_"
-DEX_FILE_FULL="/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/classes.dex"
-PKG_SIGNED_FULL="/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity-debug-unaligned.apk"
+RESOURCE_PACKAGE="${ROOT_DIR}/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity.ap_"
+DEX_FILE_FULL="${ROOT_DIR}/Android-FTDI/bin/classes.dex"
+PKG_SIGNED_FULL="${ROOT_DIR}/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity-debug-unaligned.apk"
 
 #
 # Stupid stupid task. Really...Really...really try to hide the details.
@@ -258,13 +258,13 @@ java -classpath /home/jdamon/Tools/android-sdk-linux/tools/lib/sdklib.jar  com.a
 # [zip-align] Executing '/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/zipalign' with arguments:
 # [zip-align] '-f'
 # [zip-align] '4'
-# [zip-align] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity-debug-unaligned.apk'
-# [zip-align] '/media/jdamon/Development/Documents/Projects/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity-debug.apk'
+# [zip-align] '${ROOT_DIR}/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity-debug-unaligned.apk'
+# [zip-align] '${ROOT_DIR}/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity-debug.apk'
 # [zip-align]
 # [zip-align] The ' characters around the executable and arguments are
 # [zip-align] not part of the command.
-#      [echo] Debug Package: /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity-debug.apk
+#      [echo] Debug Package: ${ROOT_DIR}/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity-debug.apk
 
 
-/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/zipalign -f 4 /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity-debug-unaligned.apk /media/jdamon/Development/Documents/Projects/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity-debug.apk
+/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/zipalign -f 4 ${ROOT_DIR}/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity-debug-unaligned.apk ${ROOT_DIR}/Android-FTDI/bin/com.UARTLoopback.UARTLoopbackActivity-debug.apk
 
