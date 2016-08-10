@@ -91,6 +91,21 @@ public final class BuildConfig {
 }
 " > ./gen/com/UARTLoopback/BuildConfig.java
 
+# or 
+# /**
+#  * Automatically generated file. DO NOT MODIFY
+#  */
+# package com.accesio.temperatureconverter;
+
+# public final class BuildConfig {
+#   public static final boolean DEBUG = Boolean.parseBoolean("true");
+#   public static final String APPLICATION_ID = "com.accesio.temperatureconverter";
+#   public static final String BUILD_TYPE = "debug";
+#   public static final String FLAVOR = "prod";
+#   public static final int VERSION_CODE = 1;
+#   public static final String VERSION_NAME = "1.0";
+# }
+
 
 # [javac] com/UARTLoopback/FT311UARTInterface.java added as com/UARTLoopback/FT311UARTInterface.class doesn't exist.
 # [javac] com/UARTLoopback/Globals.java added as com/UARTLoopback/Globals.class doesn't exist.
@@ -264,7 +279,7 @@ PKG_SIGNED_FULL="${ROOT_DIR}/${PROJECT}/bin/com.UARTLoopback.UARTLoopbackActivit
 java -classpath /home/jdamon/Tools/android-sdk-linux/tools/lib/sdklib.jar  com.android.sdklib.build.ApkBuilderMain ${PKG_SIGNED_FULL} -v -z ${RESOURCE_PACKAGE} -f ${DEX_FILE_FULL}
 
 
-#  [zipalign] Running zip align on final apk...
+# [zipalign] Running zip align on final apk...
 # [zip-align] Current OS is Linux
 # [zip-align] Executing '/home/jdamon/Tools/android-sdk-linux/build-tools/23.0.1/zipalign' with arguments:
 # [zip-align] '-f'
